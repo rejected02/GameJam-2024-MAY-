@@ -10,10 +10,12 @@ public class PlayerMovement : MonoBehaviour
 
     private CharacterController controller;
     private Vector3 moveDirection = Vector3.zero;
+    private Transform mainCameraTransform;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        mainCameraTransform = Camera.main.transform;
     }
 
     void Update()
@@ -22,12 +24,14 @@ public class PlayerMovement : MonoBehaviour
         transform.Rotate(Vector3.up * mouseX * sensitivity);
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        Vector3 forward = transform.forward;
-        forward.y = 0;
+        Vector3 forward = mainCameraTransform.forward;
+        forward.y = 0; 
         forward.Normalize();
-        Vector3 right = transform.right;
+
+        Vector3 right = mainCameraTransform.right;
         right.y = 0;
         right.Normalize();
+
         Vector3 move = horizontal * right + vertical * forward;
         moveDirection.x = move.x * speed;
         moveDirection.z = move.z * speed;
