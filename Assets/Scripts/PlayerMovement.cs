@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     private CharacterController controller;
     private Vector3 moveDirection = Vector3.zero;
-    private Transform mainCameraTransform;
+    public Transform mainCameraTransform;
 
     void Start()
     {

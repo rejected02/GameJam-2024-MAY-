@@ -3,18 +3,29 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - TriggerMesh
+  - Enemy
+  - Stone
+  - Wood
+  - Blood
+  - Metal
+  - Sand
+  - ExaminePoint
+  - PermanentDamage
+  - SingleDamage
+  - Ragdoll
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Environment
+  - Mirror
+  - PostProcessing
+  - InteractiveObjects
   - 
   - 
   - 
